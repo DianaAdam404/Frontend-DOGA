@@ -14,6 +14,7 @@ const initialFormData = {
 
 const paymentMethods = ["Készpénz", "Előre utalás", "Utánvét", "Bankkártya"];
 const orderEndpoint = import.meta.env.VITE_ORDER_API_URL;
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
 function validateStep(step, formData) {
     const errors = {};
